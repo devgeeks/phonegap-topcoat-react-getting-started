@@ -1,5 +1,5 @@
-Our First PhoneGap React App
-============================
+Our First PhoneGap Topcoat React App
+====================================
 
 This is a super-basic intro to creating a React app and having a play with the topcoat components we will be using in the new version of the developer app.
 
