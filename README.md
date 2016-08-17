@@ -22,6 +22,11 @@ Requirements
 
 4. The React Topcoat components (clone this somewhere)
 	- https://github.com/devgeeks/phonegap-topcoat-react
+	- For now, this needs to be installed below from a local clone that you have built:
+		- `git clone https://github.com/devgeeks/phonegap-topcoat-react`
+		- `cd phonegap-topcoat-react`
+		- `npm install`
+		- `npm run build`
 
 Getting started
 ---------------
