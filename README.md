@@ -3,7 +3,7 @@ Our First PhoneGap Topcoat React App
 
 This is a super-basic intro to creating a React app and having a play with the topcoat components we will be using in the new version of the developer app.
 
-We will use the `phonegap-template-react-hot-reloader` to generate a basic starter app, add the `phonegap-react-topcoat` components package, then lay out some components on a "page".
+We will use the `phonegap-template-react-hot-reloader` template to generate a basic starter app, add the `phonegap-react-topcoat` components package, then lay out some components on a "page".
 
 Requirements
 ------------
@@ -11,28 +11,30 @@ Requirements
 1. Node 5+ and PhoneGap (obv)
 
 2. Topcoat
-	- http://topcoat.io/
+  - http://topcoat.io/
 
 3. Basic understanding of React (and I guess ES6, babel and webpack)
-	- http://exploringjs.com/
-	- https://babeljs.io/docs/learn-es2015/
-	- https://www.lynda.com/JavaScript-tutorials/Up-Running-ECMAScript-6/424003-2.html
-	- https://facebook.github.io/react/docs/getting-started.html
-	- https://egghead.io/courses/react-fundamentals
+  - http://exploringjs.com/
+  - https://babeljs.io/docs/learn-es2015/
+  - https://es6.io/
+  - http://ccoenraets.github.io/es6-tutorial-data/
+  - https://medium.com/@rajaraodv/webpack-the-confusing-parts-58712f8fcad9#.8zfv86grc
+  - https://facebook.github.io/react/docs/getting-started.html
+  - https://egghead.io/courses/react-fundamentals
 
 4. The React Topcoat components (clone this somewhere)
-	- https://github.com/devgeeks/phonegap-topcoat-react
-	- For now, this needs to be installed below from a local clone that you have built:
-		- `git clone https://github.com/devgeeks/phonegap-topcoat-react`
-		- `cd phonegap-topcoat-react`
-		- `npm install`
-		- `npm run build`
+  - https://github.com/devgeeks/phonegap-topcoat-react
+  - For now, this needs to be installed below from a local clone that you have built:
+    - `git clone https://github.com/devgeeks/phonegap-topcoat-react`
+    - `cd phonegap-topcoat-react`
+    - `npm install`
+    - `npm run build`
 
 Getting started
 ---------------
 
 First we will need a fresh new app created using the PhoneGap React hot loader template
-	
+
 ```
 phonegap create myreactapp --template react-hot-loader
 cd myreactapp
@@ -71,7 +73,7 @@ To:
   includes: [ PATHS.src, PATHS.node_modules ],
 },
 ```
-
+_Note: The `include` changes to `includes` (plural) when accepting an array of paths instead of a single path._
 
 Then, in `./src/index.js` add the following line after the first CSS import:
 
@@ -82,6 +84,8 @@ import 'topcoat/css/topcoat-mobile-light.css';
 Restarting the hot reloading server (`npm start` again) will show that the Topcoat CSS has already changed the look of the app a little.
 
 Next, we will add the `phonegap-topcoat-react` components:
+
+_Note: Be sure you have run `npm install && npm run build` in your local clone of `phonegap-topcoat-react` before continuing..._
 
 ```
 npm install /path/to/phonegap-topcoat-react --save
@@ -122,12 +126,12 @@ Lastly, we can use the fact that the `Button` component passes through any props
   clickHandler={ () => this.sayHello('Hello world') }
   cta
   style={
-  	{
-  		position: 'absolute',
-  		bottom: '100px',
-  		left: '50%',
-  		transform: 'translate(-50%, 0)'
-  	}
+    {
+      position: 'absolute',
+      bottom: '100px',
+      left: '50%',
+      transform: 'translate(-50%, 0)'
+    }
   }
 >Say hello</Button>
 ```
